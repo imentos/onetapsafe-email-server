@@ -94,9 +94,9 @@ app.post('/api/test-email', async (req, res) => {
   const msg = {
     to: req.body.email || process.env.TEST_EMAIL,
     from: process.env.SENDER_EMAIL,
-    subject: 'OneTapSafe Test Email',
-    text: 'This is a test email from OneTapSafe server.',
-    html: '<p><strong>This is a test email from OneTapSafe server.</strong></p>'
+    subject: 'OneTap OK Test Email',
+    text: 'This is a test email from OneTap OK server.',
+    html: '<p><strong>This is a test email from OneTap OK server.</strong></p>'
   };
   
   try {
