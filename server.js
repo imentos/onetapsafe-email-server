@@ -30,10 +30,10 @@ app.post('/api/send-alert', async (req, res) => {
   const msg = {
     to: email,
     from: process.env.SENDER_EMAIL,
-    subject: `⚠️ ${userName} Missed Daily Check-In`,
+    subject: `⚠️ ${userName} Missed Daily Check-In - OneTap OK`,
     text: `Hi ${contactName},
 
-This is an automated safety alert from OneTapSafe.
+This is an automated safety alert from OneTap OK.
 
 ${userName} has missed their daily safety check-in scheduled for today.
 
@@ -45,7 +45,7 @@ This message was sent because you are listed as an emergency contact.
 Please reach out to ${userName} to ensure they are safe.
 
 ---
-OneTapSafe - Automated Safety Check-In System
+OneTap OK - Automated Safety Check-In System
 Do not reply to this email.`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
