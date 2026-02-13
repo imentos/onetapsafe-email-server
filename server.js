@@ -11,7 +11,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Health check endpoint
 app.get('/', (req, res) => {
-  res.json({ status: 'OneTapSafe Email Server Running' });
+  res.json({ status: 'OneTap OK Email Server Running' });
 });
 
 // Send email alert endpoint
@@ -53,7 +53,7 @@ Do not reply to this email.`,
         
         <p>Hi <strong>${contactName}</strong>,</p>
         
-        <p>This is an automated safety alert from <strong>OneTapSafe</strong>.</p>
+        <p>This is an automated safety alert from <strong>OneTap OK</strong>.</p>
         
         <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
           <strong>${userName}</strong> has missed their daily safety check-in.
@@ -69,7 +69,7 @@ Do not reply to this email.`,
         <hr style="border: none; border-top: 1px solid #ddd; margin: 30px 0;">
         
         <p style="font-size: 12px; color: #666;">
-          OneTapSafe - Automated Safety Check-In System<br>
+          OneTap OK - Automated Safety Check-In System<br>
           Do not reply to this email.
         </p>
       </div>
@@ -111,6 +111,6 @@ app.post('/api/test-email', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`🚀 OneTapSafe Email Server running on port ${PORT}`);
+  console.log(`🚀 OneTap OK Email Server running on port ${PORT}`);
   console.log(`Sender email: ${process.env.SENDER_EMAIL}`);
 });
